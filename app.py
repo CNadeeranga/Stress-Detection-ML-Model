@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-import joblib
 import pickle
 
-# Load your trained model
-log_reg = joblib.load('stress_detection.sav')  # Replace 'stress_detection.sav' with the actual path to your saved model file
+# Load your trained model using pickle
+with open('stress_detection.sav', 'rb') as file:
+    log_reg = pickle.load(file)  # Replace 'stress_detection.sav' with the actual path to your saved model file
 
 # Create a Streamlit app
 st.title("Stress Level Predictor")
