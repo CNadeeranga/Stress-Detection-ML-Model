@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import pickle
 
 # Load your trained model
 log_reg = joblib.load('stress_detection.sav')  # Replace 'stress_detection.sav' with the actual path to your saved model file
